@@ -5,7 +5,7 @@ use std::sync::mpsc;
 
 use hydroflow::scheduled::graph::Hydroflow;
 use hydroflow::scheduled::graph_ext::GraphExt;
-use hydroflow::scheduled::handoff::{TeeingHandoff, VecHandoff};
+use hydroflow::scheduled::handoff::VecHandoff;
 use hydroflow::scheduled::port::{RecvCtx, SendCtx};
 use hydroflow::{var_args, var_expr};
 use multiplatform_test::multiplatform_test;

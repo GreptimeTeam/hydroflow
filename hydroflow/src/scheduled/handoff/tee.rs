@@ -69,8 +69,13 @@ impl<T> HandoffMeta for TeeingHandoff<T> {
         self
     }
 
+    /// if all reader's content is empty, return true
     fn is_bottom(&self) -> bool {
-        true
+        self.internal
+            .borrow()
+            .readers
+            .iter()
+            .all(|r| r.contents.is_empty())
     }
 }
 

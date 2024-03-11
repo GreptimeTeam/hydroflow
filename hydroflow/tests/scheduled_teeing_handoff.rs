@@ -95,7 +95,7 @@ fn test_scheduling() {
     assert_eq!(&*out2.borrow(), &[1, 2, 3, 4], "out2");
     assert_eq!(&*out3.borrow(), &[1, 2, 3, 4], "out3");
 
-    input.borrow_mut().extend(4..8);
+    input.borrow_mut().extend(5..=8);
     df.schedule_subgraph(src_sg_id);
 
     df.run_available();
